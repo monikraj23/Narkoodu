@@ -98,7 +98,7 @@ const About = () => {
                 {/* Bento Grid Layout */}
                 <StaggerItem style={{ gridColumn: 'span 4' }}>
                   <PremiumCard style={{ padding: 0 }}>
-                    <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '1.5rem' }}>
+                    <div className="icon-wrapper" style={{ marginBottom: '1.5rem' }}>
                       {values[0].icon}
                     </div>
                     <h3 style={{ fontSize: '1.75rem', fontWeight: '400', marginBottom: '1rem' }}>{values[0].title}</h3>
@@ -108,7 +108,7 @@ const About = () => {
                 
                 <StaggerItem style={{ gridColumn: 'span 2' }}>
                   <PremiumCard style={{ padding: 0 }}>
-                    <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '1.5rem' }}>
+                    <div className="icon-wrapper" style={{ marginBottom: '1.5rem' }}>
                       {values[1].icon}
                     </div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: '400', marginBottom: '1rem' }}>{values[1].title}</h3>
@@ -118,7 +118,7 @@ const About = () => {
 
                 <StaggerItem style={{ gridColumn: 'span 2' }}>
                   <PremiumCard style={{ padding: 0 }}>
-                    <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '1.5rem' }}>
+                    <div className="icon-wrapper" style={{ marginBottom: '1.5rem' }}>
                       {values[2].icon}
                     </div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: '400', marginBottom: '1rem' }}>{values[2].title}</h3>
@@ -128,7 +128,7 @@ const About = () => {
 
                 <StaggerItem style={{ gridColumn: 'span 2' }}>
                   <PremiumCard style={{ padding: 0 }}>
-                    <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '1.5rem' }}>
+                    <div className="icon-wrapper" style={{ marginBottom: '1.5rem' }}>
                       {values[3].icon}
                     </div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: '400', marginBottom: '1rem' }}>{values[3].title}</h3>
@@ -138,7 +138,7 @@ const About = () => {
 
                 <StaggerItem style={{ gridColumn: 'span 2' }}>
                   <PremiumCard style={{ padding: 0 }}>
-                    <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '1.5rem' }}>
+                    <div className="icon-wrapper" style={{ marginBottom: '1.5rem' }}>
                       {values[4].icon}
                     </div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: '400', marginBottom: '1rem' }}>{values[4].title}</h3>

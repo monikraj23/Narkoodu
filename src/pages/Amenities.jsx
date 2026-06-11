@@ -39,7 +39,7 @@ const Amenities = () => {
             {amenities.map((item, index) => (
               <StaggerItem key={index}>
                 <PremiumCard style={{ padding: 0 }}>
-                  <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                  <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                     {item.icon}
                   </div>
                   <h3 style={{ fontSize: '1.4rem', margin: '0 0 1rem 0', fontWeight: '400', color: 'var(--text-color)' }}>{item.title}</h3>
