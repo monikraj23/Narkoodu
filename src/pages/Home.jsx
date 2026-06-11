@@ -36,7 +36,6 @@ const Home = () => {
             alt="Premium Coworking Space" 
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
-          {/* Dark Luxury & Vignette Overlay */}
           <div style={{ 
             position: 'absolute', 
             inset: 0, 
@@ -44,6 +43,10 @@ const Home = () => {
             zIndex: 1 
           }} />
         </motion.div>
+        
+        {/* SERAMINDS Ambient Glow Interaction */}
+        <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(45, 127, 249, 0.15) 0%, transparent 70%)', filter: 'blur(80px)', zIndex: 1, pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(229, 57, 80, 0.15) 0%, transparent 70%)', filter: 'blur(80px)', zIndex: 1, pointerEvents: 'none' }} />
         
         {/* Text Content Overlay */}
         <StaggerContainer className="container" delayChildren={0.3} staggerDelay={0.2} style={{ position: 'relative', zIndex: 2, textAlign: 'center', paddingTop: '5rem' }}>
@@ -141,7 +144,7 @@ const Home = () => {
           <StaggerContainer className="grid grid-3" style={{ gap: '2rem' }}>
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <MapPin size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Prime Location</h3>
@@ -151,7 +154,7 @@ const Home = () => {
             
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <Wifi size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Enterprise Connectivity</h3>
@@ -161,7 +164,7 @@ const Home = () => {
             
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <Users size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Curated Network</h3>
@@ -171,7 +174,7 @@ const Home = () => {
             
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <Clock size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>24/7 Access</h3>
@@ -181,7 +184,7 @@ const Home = () => {
             
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <Shield size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Executive Privacy</h3>
@@ -191,7 +194,7 @@ const Home = () => {
             
             <StaggerItem>
               <PremiumCard style={{ padding: '3rem 2.5rem' }}>
-                <div className="icon-wrapper" style={{ color: 'var(--accent-color)', marginBottom: '2rem' }}>
+                <div className="icon-wrapper" style={{ marginBottom: '2rem' }}>
                   <Coffee size={32} strokeWidth={1} />
                 </div>
                 <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>Artisan Amenities</h3>
