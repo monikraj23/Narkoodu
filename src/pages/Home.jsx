@@ -110,22 +110,28 @@ const Home = () => {
         <div className="container">
           <StaggerContainer className="grid grid-3" style={{ textAlign: 'center' }}>
             <StaggerItem>
-              <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
-                <AnimatedCounter to={10} suffix="k+" />
-              </h2>
-              <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Sq.ft Workspace</p>
+              <PremiumCard style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
+                  <AnimatedCounter to={10} suffix="k+" />
+                </h2>
+                <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Sq.ft Workspace</p>
+              </PremiumCard>
             </StaggerItem>
             <StaggerItem>
-              <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
-                <AnimatedCounter to={24} suffix="/7" />
-              </h2>
-              <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Accessibility</p>
+              <PremiumCard style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
+                  <AnimatedCounter to={24} suffix="/7" />
+                </h2>
+                <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Accessibility</p>
+              </PremiumCard>
             </StaggerItem>
             <StaggerItem>
-              <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
-                <AnimatedCounter to={50} suffix="+" />
-              </h2>
-              <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Startups & Teams</p>
+              <PremiumCard style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <h2 className="text-accent" style={{ fontSize: '3.5rem', margin: '0 0 0.5rem 0' }}>
+                  <AnimatedCounter to={50} suffix="+" />
+                </h2>
+                <p style={{ margin: 0, textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>Startups & Teams</p>
+              </PremiumCard>
             </StaggerItem>
           </StaggerContainer>
         </div>

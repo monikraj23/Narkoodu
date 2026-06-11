@@ -16,6 +16,11 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      {/* Global Ambient Background */}
+      <div className="global-ambient">
+        <div className="ambient-blue"></div>
+        <div className="ambient-red"></div>
+      </div>
       <Navbar />
       <main>
         <Routes>
