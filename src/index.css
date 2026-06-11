@@ -180,6 +180,7 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
   box-shadow: 0 0 20px rgba(229, 57, 80, 0.3);
   background: rgba(229, 57, 80, 0.05);
   transform: translateY(-2px);
+  color: var(--accent-hover); /* Force text to red */
 }
 
 .premium-card:hover .btn-pill .arrow-icon {
@@ -260,12 +261,18 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
   color: var(--accent-color);
   position: relative;
   z-index: 10;
+  opacity: 1 !important;
 }
 
 .premium-card:hover .icon-wrapper {
   transform: rotate(10deg) scale(1.1);
   color: var(--accent-hover);
   filter: drop-shadow(0 0 8px rgba(229, 57, 80, 0.6));
+  opacity: 1 !important;
+}
+
+.premium-card:hover .icon-wrapper svg {
+  stroke: var(--accent-hover) !important;
 }
 
 /* Gallery Controls */

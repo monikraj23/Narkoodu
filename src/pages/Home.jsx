@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Wifi, Users, Clock, Shield, Coffee, Briefcase, TrendingUp } from 'lucide-react';
+import { MapPin, Wifi, Users, Clock, Shield, Coffee, Briefcase, TrendingUp, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSection';
 import { AnimatedCounter } from '../components/AnimatedCounter';
@@ -242,27 +242,39 @@ const Home = () => {
               <PremiumCard style={{ padding: '4rem 3rem', height: '100%' }}>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '300' }}>Hot Desk</h3>
                 <p style={{ marginBottom: '3rem', minHeight: '80px', color: 'var(--text-light)' }}>Flexible seating in our sophisticated open gallery areas. Perfect for remote executives.</p>
-                <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', color: 'var(--text-color)', transition: 'var(--transition)' }} onMouseOver={(e) => e.target.style.color = 'var(--accent-color)'} onMouseOut={(e) => e.target.style.color = 'var(--text-color)'}>Inquire <span style={{ color: 'var(--accent-color)' }}>→</span></Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
             <StaggerItem>
               <PremiumCard featured={true} style={{ padding: '4rem 3rem', height: '100%' }}>
                 <div style={{ marginBottom: '1.5rem' }}>
-                  <span style={{ color: 'var(--accent-color)', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: '400', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ width: '20px', height: '1px', background: 'var(--accent-color)' }}></span>
+                  <span className="preferred-label" style={{ letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.75rem', fontWeight: '400', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span className="preferred-line" style={{ width: '20px', height: '1px' }}></span>
                     Preferred Plan
                   </span>
                 </div>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '300', color: '#fff' }}>Dedicated Desk</h3>
                 <p style={{ marginBottom: '3rem', minHeight: '80px', color: 'var(--text-light)' }}>Your reserved, personal desk in a shared executive space. Includes lockable storage.</p>
-                <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', color: 'var(--text-color)', transition: 'var(--transition)' }} onMouseOver={(e) => e.target.style.color = 'var(--accent-color)'} onMouseOut={(e) => e.target.style.color = 'var(--text-color)'}>Inquire <span style={{ color: 'var(--accent-color)' }}>→</span></Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
             <StaggerItem>
               <PremiumCard style={{ padding: '4rem 3rem', height: '100%' }}>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontWeight: '300' }}>Private Cabin</h3>
                 <p style={{ marginBottom: '3rem', minHeight: '80px', color: 'var(--text-light)' }}>Fully furnished enclosed suites offering utmost privacy for focused teams.</p>
-                <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', color: 'var(--text-color)', transition: 'var(--transition)' }} onMouseOver={(e) => e.target.style.color = 'var(--accent-color)'} onMouseOut={(e) => e.target.style.color = 'var(--text-color)'}>Inquire <span style={{ color: 'var(--accent-color)' }}>→</span></Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
           </StaggerContainer>
