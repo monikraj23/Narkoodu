@@ -34,33 +34,39 @@ const PremiumGallery = () => {
 
       {/* Main Image Container */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '85%', height: '90%', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.8)', zIndex: 1 }}>
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.img
             key={currentIndex}
             src={images[currentIndex].src}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.05 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ 
+              opacity: { duration: 1.2, ease: "easeInOut" },
+              scale: { duration: 4.5, ease: "linear" } 
+            }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
             alt={images[currentIndex].label}
           />
         </AnimatePresence>
         
         {/* Subtle Dark Gradient */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(11,11,11,0.8) 0%, transparent 40%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(11,11,11,0.9) 0%, transparent 40%)', pointerEvents: 'none' }} />
         
         {/* Label inside main image */}
-        <div style={{ position: 'absolute', bottom: '2rem', left: '2.5rem' }}>
-          <motion.span 
-            key={currentIndex + '-label'}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--accent-color)' }}
-          >
-            {images[currentIndex].label}
-          </motion.span>
+        <div style={{ position: 'absolute', bottom: '2.5rem', left: '3rem' }}>
+          <AnimatePresence mode="wait">
+            <motion.span 
+              key={currentIndex + '-label'}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              style={{ fontSize: '1rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#fff', fontWeight: '600', textShadow: '0 2px 10px rgba(0,0,0,0.8)', display: 'block' }}
+            >
+              {images[currentIndex].label}
+            </motion.span>
+          </AnimatePresence>
         </div>
       </div>
 
@@ -86,18 +92,14 @@ const PremiumGallery = () => {
       {/* Manual Navigation Controls */}
       <div style={{ position: 'absolute', bottom: '-1rem', right: '45%', zIndex: 3, display: 'flex', gap: '1rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '50px', backdropFilter: 'blur(16px)', border: '1px solid rgba(31, 111, 178, 0.2)' }}>
         <button 
+          className="gallery-nav-btn"
           onClick={prevImage}
-          style={{ width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid transparent', color: '#fff', cursor: 'pointer', transition: 'all 0.3s ease', background: 'transparent' }}
-          onMouseOver={(e) => { e.currentTarget.style.border = '1px solid var(--accent-color)'; e.currentTarget.style.color = 'var(--accent-color)'; }}
-          onMouseOut={(e) => { e.currentTarget.style.border = '1px solid transparent'; e.currentTarget.style.color = '#fff'; }}
         >
           <ChevronLeft size={20} />
         </button>
         <button 
+          className="gallery-nav-btn"
           onClick={nextImage}
-          style={{ width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid transparent', color: '#fff', cursor: 'pointer', transition: 'all 0.3s ease', background: 'transparent' }}
-          onMouseOver={(e) => { e.currentTarget.style.border = '1px solid var(--accent-color)'; e.currentTarget.style.color = 'var(--accent-color)'; }}
-          onMouseOut={(e) => { e.currentTarget.style.border = '1px solid transparent'; e.currentTarget.style.color = '#fff'; }}
         >
           <ChevronRight size={20} />
         </button>
@@ -108,12 +110,11 @@ const PremiumGallery = () => {
         {images.map((_, idx) => (
           <div 
             key={idx} 
+            className="gallery-indicator"
+            onClick={() => setCurrentIndex(idx)}
             style={{ 
               width: idx === currentIndex ? '30px' : '10px', 
-              height: '2px', 
-              background: idx === currentIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.2)',
-              transition: 'all 0.4s ease',
-              borderRadius: '2px'
+              background: idx === currentIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.2)'
             }} 
           />
         ))}

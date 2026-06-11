@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/AnimatedSection';
 import { PremiumCard } from '../components/PremiumCard';
-import { Check } from 'lucide-react';
-
+import { Check, ArrowRight } from 'lucide-react';
 const MembershipPlans = () => {
   return (
     <FadeIn duration={0.6}>
@@ -42,7 +41,11 @@ const MembershipPlans = () => {
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Artisan beverages</li>
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Access to premium lounges</li>
                 </ul>
-                <Link to="/contact" className="btn btn-outline" style={{ width: '100%' }}>Inquire Now</Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
 
@@ -50,8 +53,8 @@ const MembershipPlans = () => {
             <StaggerItem>
               <PremiumCard featured={true} style={{ padding: '5rem 3rem', transform: 'scale(1.05)', zIndex: 10 }}>
                 <div style={{ marginBottom: '1.5rem' }}>
-                  <span style={{ color: 'var(--accent-color)', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: '400', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ width: '30px', height: '1px', background: 'var(--accent-color)' }}></span>
+                  <span className="preferred-label" style={{ letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: '400', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span className="preferred-line" style={{ width: '30px', height: '1px' }}></span>
                     Preferred Plan
                   </span>
                 </div>
@@ -72,7 +75,11 @@ const MembershipPlans = () => {
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Meeting room credits</li>
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Priority event access</li>
                 </ul>
-                <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>Inquire Now</Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
 
@@ -95,7 +102,11 @@ const MembershipPlans = () => {
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Corporate branding on door</li>
                   <li style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><Check size={18} color="var(--accent-color)" /> Custom interior layouts</li>
                 </ul>
-                <Link to="/contact" className="btn btn-outline" style={{ width: '100%' }}>Inquire Now</Link>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <Link to="/contact" className="btn-pill" style={{ width: '100%' }}>
+                    Inquire Now <ArrowRight size={16} className="arrow-icon" />
+                  </Link>
+                </div>
               </PremiumCard>
             </StaggerItem>
 

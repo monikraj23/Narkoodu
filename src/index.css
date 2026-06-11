@@ -147,11 +147,44 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 }
 
 .btn-outline:hover {
-  background: rgba(45, 127, 249, 0.1);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(45, 127, 249, 0.4);
+}
+
+/* Premium Pill Button */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--accent-color);
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 15px rgba(45, 127, 249, 0.2);
+  transition: var(--transition-slow);
+  backdrop-filter: blur(8px);
+}
+
+.btn-pill .arrow-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.premium-card:hover .btn-pill {
   border-color: var(--accent-hover);
-  color: var(--text-color);
-  box-shadow: 0 10px 30px rgba(229, 57, 80, 0.2);
-  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 20px rgba(229, 57, 80, 0.3);
+  background: rgba(229, 57, 80, 0.05);
+  transform: translateY(-2px);
+}
+
+.premium-card:hover .btn-pill .arrow-icon {
+  transform: translateX(4px);
+  color: var(--accent-hover);
 }
 
 /* Premium Cards */
@@ -185,6 +218,25 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(229, 57, 80, 0.25);
 }
 
+/* Preferred Plan Label */
+.preferred-label {
+  color: var(--accent-color);
+  transition: var(--transition-slow);
+}
+.preferred-line {
+  background: var(--accent-color);
+  transition: var(--transition-slow);
+}
+
+.premium-card:hover .preferred-label {
+  color: var(--accent-hover);
+  text-shadow: 0 0 15px rgba(229, 57, 80, 0.4);
+}
+.premium-card:hover .preferred-line {
+  background: var(--accent-hover);
+  box-shadow: 0 0 10px rgba(229, 57, 80, 0.5);
+}
+
 .premium-card .spotlight {
   position: absolute;
   inset: 0;
@@ -203,14 +255,50 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 }
 
 .icon-wrapper {
-  transition: all 0.5s ease;
+  transition: var(--transition-slow);
   display: inline-flex;
   color: var(--accent-color);
+  position: relative;
+  z-index: 10;
 }
 
 .premium-card:hover .icon-wrapper {
   transform: rotate(10deg) scale(1.1);
   color: var(--accent-hover);
+  filter: drop-shadow(0 0 8px rgba(229, 57, 80, 0.6));
+}
+
+/* Gallery Controls */
+.gallery-nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: var(--transition-slow);
+  background: transparent;
+  box-shadow: 0 0 10px rgba(45, 127, 249, 0.2);
+}
+.gallery-nav-btn:hover {
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(229, 57, 80, 0.4);
+}
+
+.gallery-indicator {
+  height: 2px;
+  transition: var(--transition-slow);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.gallery-indicator:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 0 8px rgba(229, 57, 80, 0.6) !important;
 }
 
 /* Form Controls */
