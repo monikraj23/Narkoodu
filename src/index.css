@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-color: #0B0B0B;
-  --surface-color: #151515;
-  --accent-color: #C6A769;
-  --accent-hover: #b09153;
-  --text-color: #F5F5F5;
-  --text-light: #A3A3A3; 
+  --bg-color: #060D14; /* Deep luxury navy */
+  --surface-color: #0E1A27; /* Frosted navy surface */
+  --accent-color: #2B82BA; /* Seraminds Primary Blue */
+  --accent-hover: #1A608F; /* Darker blue for hover */
+  --secondary-accent: #E5203D; /* Seraminds Red */
+  --text-color: #F8FAFC;
+  --text-light: #94A3B8; 
   
   --glass-bg: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -118,14 +119,14 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: var(--bg-color);
+  color: #ffffff;
   border: 1px solid var(--accent-color);
 }
 
 .btn-primary:hover {
   background-color: transparent;
   color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(198, 167, 105, 0.2);
+  box-shadow: 0 10px 30px rgba(43, 130, 186, 0.2);
 }
 
 .btn-outline {
@@ -144,10 +145,10 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 /* Premium Cards */
 .premium-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 163, 115, 0.15);
+  border: 1px solid rgba(43, 130, 186, 0.15);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
@@ -155,13 +156,13 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 }
 
 .premium-card:hover {
-  border-color: rgba(212, 163, 115, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 163, 115, 0.1);
+  border-color: rgba(43, 130, 186, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(43, 130, 186, 0.15);
 }
 
 .premium-card.featured {
-  border-color: rgba(212, 163, 115, 0.4);
-  background: rgba(212, 163, 115, 0.05);
+  border-color: rgba(229, 32, 61, 0.4); /* Seraminds Red for featured */
+  background: rgba(229, 32, 61, 0.05);
 }
 
 .premium-card.featured:hover {

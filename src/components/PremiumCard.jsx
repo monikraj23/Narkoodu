@@ -55,7 +55,7 @@ export const PremiumCard = ({ children, className = '', style = {}, featured = f
         className="spotlight"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(212, 163, 115, 0.15), transparent 40%)`
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(43, 130, 186, 0.15), transparent 40%)`
         }}
       />
       <div className="card-content">
