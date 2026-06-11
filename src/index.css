@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-color: #060D14; /* Deep luxury navy */
-  --surface-color: #0E1A27; /* Frosted navy surface */
-  --accent-color: #2B82BA; /* Seraminds Primary Blue */
-  --accent-hover: #1A608F; /* Darker blue for hover */
-  --secondary-accent: #E5203D; /* Seraminds Red */
-  --text-color: #F8FAFC;
-  --text-light: #94A3B8; 
+  --bg-color: #0A0A0A; /* Deep Charcoal Black */
+  --surface-color: #121417; /* Dark Graphite */
+  --accent-color: #0E3A66; /* Corporate Blue */
+  --accent-hover: #1F6FB2; /* Royal Blue */
+  --highlight-accent: #E53950; /* Premium Crimson Red */
+  --text-color: #F5F7FA; /* Soft Silver White */
+  --text-light: #A3A3A3; 
   
   --glass-bg: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -118,55 +118,59 @@ p { margin-bottom: 1.5rem; color: var(--text-light); font-weight: 300; font-size
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
   color: #ffffff;
-  border: 1px solid var(--accent-color);
+  border: 1px solid rgba(31, 111, 178, 0.4);
+  box-shadow: 0 4px 15px rgba(14, 58, 102, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: transparent;
-  color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(43, 130, 186, 0.2);
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-color));
+  box-shadow: 0 10px 30px rgba(31, 111, 178, 0.3);
+  color: #ffffff;
 }
 
 .btn-outline {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  background: rgba(18, 20, 23, 0.5);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(31, 111, 178, 0.3);
   color: var(--text-color);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  background: rgba(31, 111, 178, 0.1);
+  border-color: var(--accent-hover);
+  color: var(--text-color);
+  box-shadow: 0 10px 30px rgba(31, 111, 178, 0.15);
 }
 
 /* Premium Cards */
 .premium-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(43, 130, 186, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(31, 111, 178, 0.3); /* Thin blue border */
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .premium-card:hover {
-  border-color: rgba(43, 130, 186, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(43, 130, 186, 0.15);
+  border-color: rgba(31, 111, 178, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(229, 57, 80, 0.15); /* Subtle red glow */
 }
 
 .premium-card.featured {
-  border-color: rgba(229, 32, 61, 0.4); /* Seraminds Red for featured */
-  background: rgba(229, 32, 61, 0.05);
+  border-color: rgba(31, 111, 178, 0.8);
+  background: rgba(31, 111, 178, 0.05);
 }
 
 .premium-card.featured:hover {
-  border-color: var(--accent-color);
+  border-color: var(--highlight-accent); /* Red highlight on featured */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(229, 57, 80, 0.25);
 }
 
 .premium-card .spotlight {
@@ -283,7 +287,7 @@ input:focus, select:focus, textarea:focus {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-color);
+  background: linear-gradient(90deg, var(--accent-hover), var(--highlight-accent));
   transition: width 0.3s ease;
 }
 

@@ -30,7 +30,7 @@ const PremiumGallery = () => {
     <div style={{ position: 'relative', width: '100%', height: '600px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       
       {/* Decorative Background Frame */}
-      <div style={{ position: 'absolute', top: '5%', right: '5%', width: '80%', height: '90%', border: '1px solid rgba(43,130,186,0.3)', borderRadius: '24px', zIndex: 0 }} />
+      <div style={{ position: 'absolute', top: '5%', right: '5%', width: '80%', height: '90%', border: '1px solid rgba(31, 111, 178, 0.3)', borderRadius: '24px', zIndex: 0 }} />
 
       {/* Main Image Container */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '85%', height: '90%', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.8)', zIndex: 1 }}>
@@ -84,7 +84,7 @@ const PremiumGallery = () => {
       </div>
 
       {/* Manual Navigation Controls */}
-      <div style={{ position: 'absolute', bottom: '-1rem', right: '45%', zIndex: 3, display: 'flex', gap: '1rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '50px', backdropFilter: 'blur(16px)', border: '1px solid rgba(43,130,186,0.2)' }}>
+      <div style={{ position: 'absolute', bottom: '-1rem', right: '45%', zIndex: 3, display: 'flex', gap: '1rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '50px', backdropFilter: 'blur(16px)', border: '1px solid rgba(31, 111, 178, 0.2)' }}>
         <button 
           onClick={prevImage}
           style={{ width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid transparent', color: '#fff', cursor: 'pointer', transition: 'all 0.3s ease', background: 'transparent' }}
