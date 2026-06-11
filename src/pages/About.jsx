@@ -25,59 +25,59 @@ const About = () => {
 
       <section className="section" style={{ paddingTop: '4rem' }}>
         <div className="container">
-          <div style={{ display: 'flex', gap: '6rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
             
-            {/* Left Side: Content, Mission, Vision */}
-            <FadeIn delay={0.2} style={{ flex: '1 1 500px', paddingRight: '2rem' }}>
-              <span style={{ fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1.5rem' }}>Our Philosophy</span>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: '300', lineHeight: 1.1 }}>A Vision of <br/>Executive Excellence</h2>
-              <div style={{ width: '60px', height: '1px', background: 'var(--accent-color)', marginBottom: '2.5rem' }} />
+            <div style={{ display: 'flex', gap: '6rem', alignItems: 'center', flexWrap: 'wrap' }}>
               
-              <p style={{ fontSize: '1.25rem', lineHeight: 1.8, marginBottom: '2rem', fontWeight: '300', color: 'var(--text-color)' }}>
-                Narkoodu is not merely a coworking space. It is a premier business destination where visionary individuals and expanding enterprises convene to work, collaborate, and prosper.
-              </p>
-              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--text-light)', marginBottom: '3.5rem' }}>
-                Conceived with the intent of offering an unparalleled, accessible executive environment in Chennai, we deeply comprehend the nuances of modern business. We have curated a setting that not only inspires productivity but also fosters genuine, high-caliber connections.
-              </p>
+              {/* Left Side: Content, Mission, Vision */}
+              <FadeIn delay={0.2} style={{ flex: '1 1 500px', paddingRight: '2rem' }}>
+                <span style={{ fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1.5rem' }}>Our Philosophy</span>
+                <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: '300', lineHeight: 1.1 }}>A Vision of <br/>Executive Excellence</h2>
+                <div style={{ width: '60px', height: '1px', background: 'var(--accent-color)', marginBottom: '2.5rem' }} />
+                
+                <p style={{ fontSize: '1.25rem', lineHeight: 1.8, marginBottom: '2rem', fontWeight: '300', color: 'var(--text-color)' }}>
+                  Narkoodu is not merely a coworking space. It is a premier business destination where visionary individuals and expanding enterprises convene to work, collaborate, and prosper.
+                </p>
+                <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--text-light)', marginBottom: '3.5rem' }}>
+                  Conceived with the intent of offering an unparalleled, accessible executive environment in Chennai, we deeply comprehend the nuances of modern business. We have curated a setting that not only inspires productivity but also fosters genuine, high-caliber connections.
+                </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
-                <div>
-                  <span style={{ fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1rem' }}>Our Purpose</span>
-                  <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '300' }}>Mission</h3>
-                  <p style={{ fontSize: '1rem', color: 'var(--text-light)', margin: 0, lineHeight: 1.8 }}>
-                    To engineer an inspiring and elite workspace where professionals and esteemed businesses can seamlessly thrive.
-                  </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem' }}>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1rem' }}>Our Purpose</span>
+                    <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '300' }}>Mission</h3>
+                    <p style={{ fontSize: '1rem', color: 'var(--text-light)', margin: 0, lineHeight: 1.8 }}>
+                      To engineer an inspiring and elite workspace where professionals and esteemed businesses can seamlessly thrive.
+                    </p>
+                  </div>
+                  <div>
+                    <span style={{ fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1rem' }}>Our Future</span>
+                    <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '300' }}>Vision</h3>
+                    <p style={{ fontSize: '1rem', color: 'var(--text-light)', margin: 0, lineHeight: 1.8 }}>
+                      To be established as Chennai's most distinguished corporate coworking institution, recognized for impeccable facilities.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <span style={{ fontSize: '0.75rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent-color)', display: 'block', marginBottom: '1rem' }}>Our Future</span>
-                  <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '300' }}>Vision</h3>
-                  <p style={{ fontSize: '1rem', color: 'var(--text-light)', margin: 0, lineHeight: 1.8 }}>
-                    To be established as Chennai's most distinguished corporate coworking institution, recognized for impeccable facilities.
-                  </p>
+              </FadeIn>
+              
+              {/* Right Side: Premium Image Area */}
+              <FadeIn delay={0.4} style={{ flex: '1 1 500px' }}>
+                <div className="premium-card" style={{ padding: 0, height: '700px', position: 'relative' }}>
+                  {/* Internal Image */}
+                  <div style={{ width: '100%', height: '100%', overflow: 'hidden', borderRadius: '24px' }}>
+                    <img 
+                      src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                      alt="Executive Lounge" 
+                      className="img-hover-zoom"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
+                    {/* Premium Depth Overlay */}
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,10,10,0.8), transparent 50%)', zIndex: 1, pointerEvents: 'none' }} />
+                  </div>
                 </div>
-              </div>
-            </FadeIn>
-            
-            {/* Right Side: Premium Image Area */}
-            <FadeIn delay={0.4} style={{ flex: '1 1 500px' }}>
-              <div className="premium-card" style={{ padding: 0, height: '700px', position: 'relative' }}>
-                {/* Internal Image */}
-                <div style={{ width: '100%', height: '100%', overflow: 'hidden', borderRadius: '24px' }}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                    alt="Executive Lounge" 
-                    className="img-hover-zoom"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                  {/* Premium Depth Overlay */}
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,10,10,0.8), transparent 50%)', zIndex: 1, pointerEvents: 'none' }} />
-                </div>
-              </div>
-            </FadeIn>
+              </FadeIn>
 
-          </div>
-        </div>
-      </section>
+            </div>
 
             <div>
               <FadeIn>
